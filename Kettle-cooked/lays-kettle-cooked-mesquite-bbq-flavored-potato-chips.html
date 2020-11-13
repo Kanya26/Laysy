@@ -4147,7 +4147,7 @@
                     <nav aria-label="main navigation">
                         <a href="../index.html" class="logo">
                             <h1>
-                                <img src="https://www.lays.com/sites/lays.com/themes/lays/img/logo-lays.png?v=2" alt="Lay's">
+                                <img src="../img/logo-lays.png" alt="Lay's">
                             </h1>
                         </a>
                         <div class="menu-options">
@@ -4212,13 +4212,13 @@
                         </a>
                     </nav>
                 </div>
-                <div id="submenu" tabindex="0">
+                <div id="submenu" tabindex="0" style="top: -145px; display: none;">
                     <div class="container">
                         <ul>
                             <li style="background-color: #f8931f">
                                 <a href="../Lay's.html">
                                     <div class="left-side">
-                                        <img class="lazy" src="https://www.lays.com/sites/lays.com/files/2019-09/CheddarSC_0.png"
+                                        <img class="lazy" src="../img/CheddarSC_0.png"
                                             data-src="https://www.lays.com/sites/lays.com/files/2019-09/CheddarSC_0.png" alt="LAY'S®">
                                     </div>
                                     <div class="right-side">
@@ -4230,7 +4230,7 @@
                                 <a href="../Better-for-you.html">
                                     <div class="left-side">
                                         <img class="lazy"
-                                            src="https://www.lays.com/sites/lays.com/files/2019-09/Lightly%20Salted%20Classic.png"
+                                            src="../img/Lightly Salted Classic.png"
                                             data-src="https://www.lays.com/sites/lays.com/files/2019-09/Lightly%20Salted%20Classic.png"
                                             alt="LAY'S® Better For You">
                                     </div>
@@ -4242,7 +4242,7 @@
                             <li style="background-color: #336b3e">
                                 <a href="../kettle-cooked.html">
                                     <div class="left-side">
-                                        <img class="lazy" src="https://www.lays.com/sites/lays.com/files/2019-02/K-jalapeno_0.jpg"
+                                        <img class="lazy" src="../img/K-jalapeno_0.png"
                                             data-src="https://www.lays.com/sites/lays.com/files/2019-02/K-jalapeno_0.jpg"
                                             alt="LAY'S® Kettle Cooked">
                                     </div>
@@ -4254,7 +4254,7 @@
                             <li style="background-color: #0094bc">
                                 <a href="../poppables.html">
                                     <div class="left-side">
-                                        <img class="lazy" src="https://www.lays.com/sites/lays.com/files/2019-01/lays-poppables_0.jpg"
+                                        <img class="lazy" src="../img/lays-poppables_0.png"
                                             data-src="https://www.lays.com/sites/lays.com/files/2019-01/lays-poppables_0.jpg"
                                             alt="LAY'S® Poppables™">
                                     </div>
@@ -4266,7 +4266,7 @@
                             <li style="background-color: #00aa4f">
                                 <a href="../stax.html">
                                     <div class="left-side">
-                                        <img class="lazy" src="https://www.lays.com/sites/lays.com/files/2019-01/lays-stax.jpg"
+                                        <img class="lazy" src="../img/lays-stax.png"
                                             data-src="https://www.lays.com/sites/lays.com/files/2019-01/lays-stax.jpg" alt="LAY'S® Stax®">
                                     </div>
                                     <div class="right-side">
@@ -4277,7 +4277,7 @@
                             <li style="background-color: #ae1824">
                                 <a href="../Wavy.html">
                                     <div class="left-side">
-                                        <img class="lazy" src="https://www.lays.com/sites/lays.com/files/2019-09/Wavy%20Original_0.png"
+                                        <img class="lazy" src="../img/Wavy Original_0.png"
                                             data-src="https://www.lays.com/sites/lays.com/files/2019-09/Wavy%20Original_0.png"
                                             alt="LAY'S® Wavy">
                                     </div>
@@ -5118,11 +5118,14 @@
                             });
                         }
                     }
-                }).call();
-            </script></span></div><iframe id="destination_publishing_iframe_pepsico_0"
-        style="display: none; width: 0px; height: 0px;"
-        src="https://pepsico.demdex.net/dest4.html?d_nsid=0#https%3A%2F%2Fwww.lays.com%2Fproducts%2Flays-kettle-cooked-mesquite-bbq-flavored-potato-chips"></iframe>
-    <div id="destini" role="dialog"><a class="destini-close" href="#"><span class="srt">Close modal</span>×</a><iframe
+                }).call(); 
+                function closeiframe(){
+                    document.getElementById('destini').style = 'display: none'
+                }
+            </script></span></div><iframe id="rufous-sandbox" scrolling="no" allowtransparency="true" allowfullscreen="true"
+        style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;"
+        title="Twitter analytics iframe" frameborder="0"></iframe>
+    <div id="destini" onclick="closeiframe()" role="dialog"><a class="destini-close" href="#"><span class="srt">Close modal</span>×</a><iframe
             id="destini-iframe" src="https://destinilocators.com/pepsiconew/site/locator.php?TLL=3727"></iframe></div>
 </body>
 
