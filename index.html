@@ -2194,7 +2194,7 @@
 		}
 
 		.home-slides .video-layer .btn-playing>div {
-			display: none
+			display: none;
 		}
 
 		.home-slides .video-layer .btn-playing>div svg {
@@ -2203,7 +2203,7 @@
 		}
 
 		.home-slides .video-layer .btn-playing>div.active {
-			display: block
+			display: block;
 		}
 
 		.home-slides .video-layer .btn-sound {
@@ -4279,29 +4279,71 @@
 
 							<div class="owl-stage-outer">
 								<div class="owl-stage"
-									style="transform: translate3d(-1830px, 0px, 0px); transition: all 0.25s ease 0s; width: 2746px;">
+									style="transform: translate3d(-1830px, 0px, 0px); transition: all 0.75s ease 0s; width: 2746px;">
 									<div class="owl-item" aria-hidden="true" style="width: 915.2px;">
 										<div data-slide="1040" class="slide slide_1040">
 											<img class="hide-mobile" src="img/video-preview.jpg" alt="">
-											<img class="just-mobile" src="/" alt="">
+											<img class="just-mobile" src="img/video-preview.jpg" alt="">
 											<div class="cover">
 												<div class="video-layer">
-													<div class="btn-playing btn-youtube" data-key="mZ0bQgwSUrE">
-														<div class="btn-pause active">
+													
+														
+													<div class="btn-playing btn-youtube" data-key="mZ0bQgwSUrE" onclick="pause()">
+														<div class="btn-pause active" id="pause" >
+															
+															<script>
+															var numbervideo = 1;
+													
+														function pause() {
+														  var pause=document.getElementById("pause");
+														  var play=document.getElementById("play");
+														  if(numbervideo==1){
+															  pause.setAttribute("class","btn-pause");
+															  play.setAttribute("class","btn-play active");
+															  numbervideo=0;
+														  }
+														  else{
+															pause.setAttribute("class","btn-pause active");
+															  play.setAttribute("class","btn-play");
+															  numbervideo=1;
+														  }
+
+														}
+															</script>
+
 															<svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"
 																width="24" height="24" viewBox="0 0 24 24">
 																<path d="M11 22h-4v-20h4v20zm6-20h-4v20h4v-20z"></path>
 															</svg>
 														</div>
-														<div class="btn-play">
+														<div class="btn-play" id="play">
 															<svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"
 																width="24" height="24" viewBox="0 0 24 24">
 																<path d="M3 22v-20l18 10-18 10z"></path>
 															</svg>
 														</div>
 													</div>
-													<div class="btn-sound btn-youtube" data-key="mZ0bQgwSUrE">
-														<div class="btn-mute active">
+													<div class="btn-sound btn-youtube" data-key="mZ0bQgwSUrE" onclick="sound()">
+														<script>
+															var numbervideo = 1;
+													
+														function sound() {
+														  var mute=document.getElementById("mute");
+														  var unmute=document.getElementById("unmute");
+														  if(numbervideo==1){
+															  mute.setAttribute("class","btn-mute");
+															  unmute.setAttribute("class","btn-unmute active");
+															  numbervideo=0;
+														  }
+														  else{
+															mute.setAttribute("class","btn-mute active");
+															  unmute.setAttribute("class","btn-unmute");
+															  numbervideo=1;
+														  }
+
+														}
+															</script>
+														<div class="btn-mute active" id="mute">
 															<svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"
 																width="24" height="24" viewBox="0 0 24 24">
 																<path
@@ -4309,7 +4351,7 @@
 																</path>
 															</svg>
 														</div>
-														<div class="btn-unmute">
+														<div class="btn-unmute" id="unmute">
 															<svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"
 																width="24" height="24" viewBox="0 0 24 24">
 																<path
@@ -4340,9 +4382,7 @@
 											<img class="lazy hide-mobile"
 												src="img/Smiles-3.0-Banners-1970x715-Homepage-Desktop-UPDATED.jpg"
 												alt="">
-											<img class="lazy just-mobile"
-												src="img/Smiles-3.0-Banners-1970x715-Homepage-Desktop-UPDATED.jpg"
-												alt="">
+												<img class="lazy just-mobile" src="https://www.lays.com/sites/lays.com/files/2020-02/Mobile_HomepageBanner_750x960.jpg" alt="">
 											<div class="cover">
 												<p class="srt">4 smile with Lay's bags, smile with Lay's logo and
 													Operation Smile logo.</p>
@@ -4373,8 +4413,11 @@
 							</div>
 							<div class="owl-nav disabled"><button type="button" class="owl-prev"></button><button
 									type="button" class="owl-next"></button></div>
-							<div class="owl-dots"><button role="button" class="owl-dot"><span
-										class="srt">Page 1 of 3</span></button><button role="button"
+							<div class="owl-dots">
+								<button role="button" class="owl-dot">
+									<span class="srt">Page 1 of 3</span>
+								</button>
+									<button role="button"
 									class="owl-dot"><span class="srt">Page 2 of 3</span></button><button
 									role="button" class="owl-dot active"><span class="srt">Page 3 of
 										3</span></button></div>
