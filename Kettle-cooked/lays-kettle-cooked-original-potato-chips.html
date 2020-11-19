@@ -4387,18 +4387,79 @@
                                 <h1>LAY'S® Kettle Cooked Original Potato Chips</h1>
 
                                 <!-- PRODUCT DESCRIPTION -->
-                                <a aria-expanded="true" aria-controls="description" href="#"
-                                    class="linkable active">Description</a>
+                                <a id="fdescription" aria-expanded="true" aria-controls="description" href="#"
+                                    class="linkable active" onclick="description()">Description</a>
                                 <div id="description" class="expandible expanded">
                                     <p>With only the best ingredients, our LAY'S® Kettle Cooked Original chips are ready
                                         for your enjoyment. </p>
                                 </div>
+                                <script>
+                                    var number=1;
+                                    function description() {
+                                        var fdescription=document.getElementById("fdescription");
+                                        var description=document.getElementById("description");
+                                        if(number==1){
+                                            fdescription.setAttribute("aria-expanded","false");
+                                            fdescription.setAttribute("class","linkable");
+                                            description.setAttribute("style","display:none");
+                                            
+                                            number=0;
+                                        }
+                                        else{
+                                             fdescription.setAttribute("aria-expanded","true");
+                                             fdescription.setAttribute("class","linkable");
+                                            description.setAttribute("style","display:block");
+                                        
+                                            number=1;
+                                        }
+                                    }
+                                    var number2=1
+                                        function nutri() {
+                                        var fnutritionfacts=document.getElementById("fnutrition-facts");
+                                        var nutritionfacts=document.getElementById("nutrition-facts");
+                                        if(number2==1){
+                                            fnutritionfacts.setAttribute("aria-expanded","true");
+                                            fnutritionfacts.setAttribute("class","linkable active");
+                                            nutritionfacts.setAttribute("style","");
+                                            nutritionfacts.setAttribute("class","expandible expanded");
+                                            number2=0;
+                                        }
+                                        else{
+                                            fnutritionfacts.setAttribute("aria-expanded","false");
+                                            fnutritionfacts.setAttribute("class","linkable");
+                                            nutritionfacts.setAttribute("style","display:none");
+                                            nutritionfacts.setAttribute("class","expandible");
+                                            number2=1;
+                                        }
+
+                                      }
+                                    var number3=1
+                                        function ingredients() {
+                                        var fingredients=document.getElementById("fingredients");
+                                        var ingredients=document.getElementById("ingredients");
+                                        if(number3==1){
+                                            fingredients.setAttribute("aria-expanded","true");
+                                            fingredients.setAttribute("class","linkable active");
+                                            ingredients.setAttribute("style","");
+                                            ingredients.setAttribute("class","expandible expanded");
+                                            number3=0;
+                                        }
+                                        else{
+                                            fingredients.setAttribute("aria-expanded","false");
+                                            fingredients.setAttribute("class","linkable");
+                                            ingredients.setAttribute("style","display:none");
+                                            ingredients.setAttribute("class","expandible");
+                                            number3=1;
+                                        }
+
+                                      }
+                                </script>
 
                                 <!-- PRODUCT NUTRITION FACTS -->
                                 <div class="nutrition-details">
 
-                                    <a aria-expanded="false" aria-controls="nutrition-facts" href="#"
-                                        class="linkable">Nutrition Facts</a>
+                                    <a id="fnutrition-facts" aria-expanded="false" aria-controls="nutrition-facts" href="#"
+                                        class="linkable" onclick="nutri()">Nutrition Facts</a>
                                     <div id="nutrition-facts" class="expandible">
 
                                         <div class="performance-facts">
@@ -4538,8 +4599,8 @@
                                 </div>
 
                                 <!-- PRODUCT INGREDIENTS -->
-                                <a aria-expanded="false" aria-controls="ingredients" href="#"
-                                    class="linkable">Ingredients</a>
+                                <a id="fingredients" aria-expanded="false" aria-controls="ingredients" href="#"
+                                    class="linkable" onclick="ingredients()">Ingredients</a>
                                 <div id="ingredients" class="expandible">
                                     <p>Potatoes, Vegetable Oil (Corn, Canola, and/or Sunflower Oil), and Sea Salt.</p>
                                 </div>
