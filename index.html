@@ -4297,15 +4297,18 @@
 																function pause() {
 																	var pause = document.getElementById("pause");
 																	var play = document.getElementById("play");
+																	var music = document.getElementById("slide-video-mZ0bQgwSUrE");
 																	if (numbervideo == 1) {
 																		pause.setAttribute("class", "btn-pause");
 																		play.setAttribute("class", "btn-play active");
 																		numbervideo = 0;
+																		music.setAttribute("src", "https://www.youtube.com/embed/mZ0bQgwSUrE?&autoplay=0&mute=0&controls=0&loop=1");
 																	}
 																	else {
 																		pause.setAttribute("class", "btn-pause active");
 																		play.setAttribute("class", "btn-play");
 																		numbervideo = 1;
+																		music.setAttribute("src", "https://www.youtube.com/embed/mZ0bQgwSUrE?&autoplay=1&mute=0&controls=0&loop=1");
 																	}
 
 																}
@@ -4331,15 +4334,18 @@
 															function sound() {
 																var mute = document.getElementById("mute");
 																var unmute = document.getElementById("unmute");
+																var music = document.getElementById("slide-video-mZ0bQgwSUrE");
 																if (numbervideo == 1) {
 																	mute.setAttribute("class", "btn-mute");
 																	unmute.setAttribute("class", "btn-unmute active");
 																	numbervideo = 0;
+																	music.setAttribute("src", "https://www.youtube.com/embed/mZ0bQgwSUrE?&autoplay=1&mute=0&controls=0&loop=1");
 																}
 																else {
 																	mute.setAttribute("class", "btn-mute active");
 																	unmute.setAttribute("class", "btn-unmute");
 																	numbervideo = 1;
+																	music.setAttribute("src", "https://www.youtube.com/embed/mZ0bQgwSUrE?&autoplay=1&mute=1&controls=0&loop=1");
 																}
 
 															}
