@@ -4293,24 +4293,82 @@
 
 															<script>
 																var numbervideo = 1;
-
+																
+																var numbersound = 1;
 																function pause() {
+																	var mute = document.getElementById("mute");
+																	var unmute = document.getElementById("unmute");
+																	var music = document.getElementById("slide-video-mZ0bQgwSUrE");
 																	var pause = document.getElementById("pause");
 																	var play = document.getElementById("play");
 																	var music = document.getElementById("slide-video-mZ0bQgwSUrE");
-																	if (numbervideo == 1) {
+																	if (numbervideo == 1 && numbersound == 0) {
 																		pause.setAttribute("class", "btn-pause");
 																		play.setAttribute("class", "btn-play active");
 																		numbervideo = 0;
 																		music.setAttribute("src", "https://www.youtube.com/embed/mZ0bQgwSUrE?&autoplay=0&mute=0&controls=0&loop=1");
 																	}
-																	else {
+																	else if (numbervideo == 1 && numbersound == 1) {
+																		pause.setAttribute("class", "btn-pause");
+																		play.setAttribute("class", "btn-play active");
+																		numbervideo = 0;
+																		music.setAttribute("src", "https://www.youtube.com/embed/mZ0bQgwSUrE?&autoplay=0&mute=1&controls=0&loop=1");
+																	}
+																	else if(numbervideo == 0 && numbersound == 0) {
 																		pause.setAttribute("class", "btn-pause active");
 																		play.setAttribute("class", "btn-play");
 																		numbervideo = 1;
 																		music.setAttribute("src", "https://www.youtube.com/embed/mZ0bQgwSUrE?&autoplay=1&mute=0&controls=0&loop=1");
 																	}
+																	else {
+																		pause.setAttribute("class", "btn-pause active");
+																		play.setAttribute("class", "btn-play");
+																		numbervideo = 1;
+																		music.setAttribute("src", "https://www.youtube.com/embed/mZ0bQgwSUrE?&autoplay=1&mute=1&controls=0&loop=1");
+																	}
 
+																}
+	
+																function sound() {
+																	var mute = document.getElementById("mute");
+																	var unmute = document.getElementById("unmute");
+																	var music = document.getElementById("slide-video-mZ0bQgwSUrE");
+																	var pause = document.getElementById("pause");
+																	var play = document.getElementById("play");
+																	var music = document.getElementById("slide-video-mZ0bQgwSUrE");
+																	if (numbersound == 1 && numbervideo == 1) {
+																		mute.setAttribute("class", "btn-mute");
+																		unmute.setAttribute("class", "btn-unmute active");
+																		pause.setAttribute("class", "btn-pause active");
+																		play.setAttribute("class", "btn-play");
+																		numbersound = 0;
+																		music.setAttribute("src", "https://www.youtube.com/embed/mZ0bQgwSUrE?&autoplay=1&mute=0&controls=0&loop=1");
+																	}
+																	else if (numbersound == 1 && numbervideo == 0) {
+																		mute.setAttribute("class", "btn-mute");
+																		unmute.setAttribute("class", "btn-unmute active");
+																		pause.setAttribute("class", "btn-pause");
+																		play.setAttribute("class", "btn-play active");
+																		numbersound = 0;
+																		music.setAttribute("src", "https://www.youtube.com/embed/mZ0bQgwSUrE?&autoplay=1&mute=0&controls=0&loop=1");
+																	}
+																	else if (numbersound == 0 && numbervideo == 1){
+																		mute.setAttribute("class", "btn-mute active");
+																		unmute.setAttribute("class", "btn-unmute");
+																		pause.setAttribute("class", "btn-pause active");
+																		play.setAttribute("class", "btn-play");
+																		numbersound = 1;
+																		music.setAttribute("src", "https://www.youtube.com/embed/mZ0bQgwSUrE?&autoplay=1&mute=1&controls=0&loop=1");
+																	}
+																	else {
+																		mute.setAttribute("class", "btn-mute active");
+																		unmute.setAttribute("class", "btn-unmute");
+																		pause.setAttribute("class", "btn-pause");
+																		play.setAttribute("class", "btn-play active");
+																		numbersound = 1;
+																		music.setAttribute("src", "https://www.youtube.com/embed/mZ0bQgwSUrE?&autoplay=1&mute=1&controls=0&loop=1");
+																	}
+	
 																}
 															</script>
 
@@ -4328,28 +4386,7 @@
 													</div>
 													<div class="btn-sound btn-youtube" data-key="mZ0bQgwSUrE"
 														onclick="sound()">
-														<script>
-															var numbervideo = 1;
-
-															function sound() {
-																var mute = document.getElementById("mute");
-																var unmute = document.getElementById("unmute");
-																var music = document.getElementById("slide-video-mZ0bQgwSUrE");
-																if (numbervideo == 1) {
-																	mute.setAttribute("class", "btn-mute");
-																	unmute.setAttribute("class", "btn-unmute active");
-																	numbervideo = 0;
-																	music.setAttribute("src", "https://www.youtube.com/embed/mZ0bQgwSUrE?&autoplay=1&mute=0&controls=0&loop=1");
-																}
-																else {
-																	mute.setAttribute("class", "btn-mute active");
-																	unmute.setAttribute("class", "btn-unmute");
-																	numbervideo = 1;
-																	music.setAttribute("src", "https://www.youtube.com/embed/mZ0bQgwSUrE?&autoplay=1&mute=1&controls=0&loop=1");
-																}
-
-															}
-														</script>
+														
 														<div class="btn-mute active" id="mute">
 															<svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"
 																width="24" height="24" viewBox="0 0 24 24">
