@@ -4425,8 +4425,6 @@
 
 
     <!-- MAIN CONTENT -->
-    <iframe height="0" width="0" style="display: none; visibility: hidden;"
-        src="//6902285.fls.doubleclick.net/activityi;src=6902285;type=layss0;cat=layss0;ord=6126568949988;gtm=2wgal2;auiddc=8147602.1602517323;~oref=https%3A%2F%2Fwww.lays.com%2Fproducts%2Fsabritas-adobadas-flavored-potato-chips?"></iframe>
     <main id="main-content">
 
         <div class="prevent-overflow">
@@ -4440,12 +4438,11 @@
                         <!-- SCHEMA.ORG -->
                         <meta itemprop="brand" content="Lay's">
                         <meta itemprop="category" content="Snacks">
-                        <meta itemprop="name" content="SABRITAS® Adobadas Flavored Potato Chips">
+                        <meta itemprop="name" content="LAY'S® Sweet Southern Heat BBQ Flavored Potato Chips">
 
 
 
-                        <h2 class="title wow fadeInUp uppercase" style="visibility: hidden; animation-name: none;">
-                            LAY'S®</h2>
+                        <h2 class="title wow fadeInUp uppercase">LAY'S®</h2>
 
                         <div class="columns">
 
@@ -4476,10 +4473,53 @@
                                 <!-- PRODUCT DESCRIPTION -->
 
                                 <!-- PRODUCT NUTRITION FACTS -->
+                                <script>
+                                    
+                                    var number2=1
+                                        function nutri() {
+                                        var fnutritionfacts=document.getElementById("fnutrition-facts");
+                                        var nutritionfacts=document.getElementById("nutrition-facts");
+                                        if(number2==1){
+                                            fnutritionfacts.setAttribute("aria-expanded","true");
+                                            fnutritionfacts.setAttribute("class","linkable active");
+                                            nutritionfacts.setAttribute("style","");
+                                            nutritionfacts.setAttribute("class","expandible expanded");
+                                            number2=0;
+                                        }
+                                        else{
+                                            fnutritionfacts.setAttribute("aria-expanded","false");
+                                            fnutritionfacts.setAttribute("class","linkable");
+                                            nutritionfacts.setAttribute("style","display:none");
+                                            nutritionfacts.setAttribute("class","expandible");
+                                            number2=1;
+                                        }
+
+                                      }
+                                    var number3=1
+                                        function ingredients() {
+                                        var fingredients=document.getElementById("fingredients");
+                                        var ingredients=document.getElementById("ingredients");
+                                        if(number3==1){
+                                            fingredients.setAttribute("aria-expanded","true");
+                                            fingredients.setAttribute("class","linkable active");
+                                            ingredients.setAttribute("style","");
+                                            ingredients.setAttribute("class","expandible expanded");
+                                            number3=0;
+                                        }
+                                        else{
+                                            fingredients.setAttribute("aria-expanded","false");
+                                            fingredients.setAttribute("class","linkable");
+                                            ingredients.setAttribute("style","display:none");
+                                            ingredients.setAttribute("class","expandible");
+                                            number3=1;
+                                        }
+
+                                      }
+                                </script>
                                 <div class="nutrition-details">
 
-                                    <a aria-expanded="false" aria-controls="nutrition-facts" href="#"
-                                        class="linkable">Nutrition Facts</a>
+                                    <a id="fnutrition-facts" aria-expanded="false" aria-controls="nutrition-facts" href="#"
+                                        class="linkable" onclick="nutri()">Nutrition Facts</a>
                                     <div id="nutrition-facts" class="expandible">
 
                                         <div class="performance-facts">
@@ -4644,8 +4684,8 @@
                                 </div>
 
                                 <!-- PRODUCT INGREDIENTS -->
-                                <a aria-expanded="false" aria-controls="ingredients" href="#"
-                                    class="linkable">Ingredients</a>
+                                <a id="fingredients" aria-expanded="false" aria-controls="ingredients" href="#"
+                                    class="linkable" onclick="ingredients()">Ingredients</a>
                                 <div id="ingredients" class="expandible">
                                     <p>Potatoes, Vegetable Oil (Sunflower, Corn And/or Canola Oil), Adobadas Seasoning
                                         (Salt, Spices [including Red Pepper], Sugar, Yellow Corn Flour, Maltodextrin
